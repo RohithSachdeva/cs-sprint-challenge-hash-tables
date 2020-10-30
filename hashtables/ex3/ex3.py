@@ -1,11 +1,23 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    cache = {}
+    result = []
 
+    arrayLength = len(arrays)
+
+    for i in arrays: #iterate through array
+        for k in i: #Increment repeated values  
+            if k in cache:
+                cache[k] += 1
+            else:
+                cache[k] = 1
+            if cache[k] == arrayLength: #If the count == arrayLength, they appeared in all of the arrays
+                result.append(k)
+                
     return result
 
+"""
+
+"""
 
 if __name__ == "__main__":
     arrays = []
