@@ -1,8 +1,19 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    cache = {}
+    result = []
+
+    arrayLength = len(arrays)
+
+    for i in arrays:
+        for k in i:
+            if k in cache:
+                cache[k] += 1
+            else:
+                cache[k] = 1
+            if cache[k] == arrayLength:
+                result.append(k)
+
+
 
     return result
 
