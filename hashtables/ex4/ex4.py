@@ -1,10 +1,22 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
-    return result
+    newValues = []
+    positiveDict = {}
+    singleInts = []
+    for i in a:
+        if i < 0:
+            i = i * -1
+            newValues.append(i)
+        else: 
+            newValues.append(i)
+    for x in newValues:
+        if x not in positiveDict:
+            positiveDict[x] = 1
+        else: 
+            positiveDict[x] += 1
+    for k, v in positiveDict.items():
+        if v > 1:
+            singleInts.append(k)
+    return singleInts
 
 """
 
