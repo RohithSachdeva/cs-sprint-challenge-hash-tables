@@ -6,6 +6,7 @@ class Ticket:
 
 
 def reconstruct_trip(tickets, length):
+    routeDictionary = {ticket.source: }
     """
     YOUR CODE HERE
     """
